@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --azul: #3c6e71;
+    --gris: #d9d9d9;
+    --negro: #353535;
+
+}
+body{
+    background-color:var(--gris);
+}
+
+header{
+    display: flex;
+    background-color: var(--azul);
+    justify-content: space-between;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+nav{
+    display:flex;
+    align-items: center;
+}
+
+.logo{
+    height: 70px;
+    padding-left: 40px;
+}
+
+nav div{
+    padding-right: 40px;
+}
+h1{
+    padding-top: 20px;
+    padding-left: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header div#menu {
+    cursor: pointer;
+  }
+
+header div ul {
+    display: none;
+    cursor: pointer;
+  }
+  
+  
+header div ul.show { 
+    display: block; 
+    position: absolute;
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 70px;
+    right: 0;
+    background-color: #fff;
+    list-style-type: none;
+  }
+
+header div ul.show li{
+      padding: 10px;
+      color: black;
+  }
+li{
+    list-style-type: none;  
+    
+  }
+
+
+
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: 2em 10%;
+}
+
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+}
+.internacional{
+    height: 50px;
+}
+.item {
+    width: 30em;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+  }
+
+  .imagen {
+    width: 100%;
+  }
+
+
+.informacion{
+    background-color: var(--azul);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    color: #fff;
+}
+.informacion p{
+    font-weight: bolder;
+}
+
+.derechos{
+    background-color: var(--negro);
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}

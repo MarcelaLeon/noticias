@@ -42,7 +42,6 @@ const noticias = [
 ];
 
 
-
 let qs = (element) => document.querySelector(element);
 
 let contenedor = qs(".contenedor");
@@ -51,7 +50,9 @@ let menu = qs("#menu");
 
 let nacional = qs("#nacional");
 
-let internacional = qs("#internacional")
+let internacional = qs("#internacional");
+
+let inicio = qs("#inicio");
 
 menu.addEventListener("click", function() {//mouseover
     let lista = qs("#lista");
@@ -59,6 +60,7 @@ menu.addEventListener("click", function() {//mouseover
     console.log(menu);
 })
 
+/**Esto se carga al dar click en nacionales*/
 nacional.addEventListener("click", function(){
     contenedor.innerHTML="";
     for (let i=0; i<=noticias.length; i++){
@@ -75,7 +77,7 @@ nacional.addEventListener("click", function(){
             <img src="${noticias[i].imgUrl}" class="imagen">
           </div> `
     }}})
-
+/**Esto se carga al dar click en internacionales*/
 internacional.addEventListener("click", function(){
     contenedor.innerHTML="";
     for (let i=0; i<=noticias.length; i++){   
@@ -94,6 +96,42 @@ internacional.addEventListener("click", function(){
             </div> `
         }}})
 
+/**Esto se carga al dar click en inicio*/
+        inicio.addEventListener("click", function(){
+            contenedor.innerHTML="";
+            for (let i=0; i<=noticias.length; i++){
+                if (noticias[i].tipoNacional){
+                    contenedor.innerHTML+=
+                    `<div class="item"> 
+                        <div class="encabezado">
+                            <h2>${noticias[i].titulo}</h2>
+                        </div>
+                        <h3>${noticias[i].fecha}</h3>
+                        <p>
+                        ${noticias[i].descripcion}
+                        </p>
+                        <img src="${noticias[i].imgUrl}" class="imagen">
+                      </div> `
+                }
+                else{
+                    contenedor.innerHTML+=
+                    `<div class="item"> 
+                        <div class="encabezado">
+                            <h2>${noticias[i].titulo}</h2>
+                            <img src="img/internacional.png" alt="noticia internacional" class="internacional"></img>
+                        </div>
+                        <h3>${noticias[i].fecha}</h3>
+                        <p>
+                        ${noticias[i].descripcion}
+                        </p>
+                        <img src="${noticias[i].imgUrl}" class="imagen">
+                      </div> `
+                }       
+            }
+
+            })
+
+/**Esto se carga por defecto es decir al iniciar la pagina */
         for (let i=0; i<=noticias.length; i++){
             if (noticias[i].tipoNacional){
                 contenedor.innerHTML+=

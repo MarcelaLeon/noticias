@@ -45,6 +45,10 @@ h1{
     text-transform: uppercase;
 }
 
+header div#inicio {
+    cursor: pointer;
+  }
+
 header div#menu {
     cursor: pointer;
   }
